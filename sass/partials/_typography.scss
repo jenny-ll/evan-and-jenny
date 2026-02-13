@@ -3,9 +3,9 @@
 
 // Fonts
 
-$sans-serif: 'Open Sans', sans-serif;
-$serif: Merriweather, Georgia, 'Times New Roman', serif;
-$accent-font: 'Nunito', sans-serif;
+$sans-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+$serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+$accent-font: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 
 // Weights
 
@@ -20,9 +20,9 @@ $font-size-h1: 60px;
 $font-size-h2: 40px;
 $font-size-h3: 24px;
 $font-size-h4: 18px;
-$font-size-h5: 15px;
-$font-size-p: 15px;
-$nav-font-size: 13px;
+$font-size-h5: 16px;
+$font-size-p: 17px;
+$nav-font-size: 14px;
 $blog-post-title: 11px;
 
 // Responsive Sizes
@@ -31,7 +31,7 @@ $responsive-h1: 40px;
 
 // Line height
 
-$base-line-height: 29px;
+$base-line-height: 32px;
 
 // Styles
 
@@ -47,6 +47,10 @@ p {
 
 h1 {
   font-size: $font-size-h1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $serif;
 }
 
 h2 {
