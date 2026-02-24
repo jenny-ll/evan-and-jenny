@@ -140,6 +140,20 @@ Animations
     transform: translate(-50%, 0)
   }
 }
+.lily-fade-in {
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  filter: blur(2px);
+  transition: opacity 1.5s ease, transform 1.5s ease, filter 1.5s ease;
+  will-change: opacity, transform, filter;
+}
+
+.lily-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
 .floating-logo {
   animation-name: floating-logo;
   animation-duration: 2s;
@@ -261,6 +275,18 @@ Hero
     position: relative;
     min-height: 750px;
   }
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.20); // 25% white overlay -> image appears ~75% visible
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   // .rsvp-btn {
   //   position: absolute;
@@ -333,7 +359,7 @@ header {
     display: inline-block;
   }
   .logo img {
-    height: 19px;
+    height: 55px;
   }
   ul.primary-nav {
     margin: 0 0 0 75px;
@@ -415,7 +441,8 @@ Intro
 }
 
 #intro {
-  padding-top: 40px;
+  margin-top: -40px;
+  padding-top: 0;
   img {
     width: 100%;
     height: auto;
@@ -430,6 +457,42 @@ Intro
   height: 320px;
   object-fit: cover;
   border-radius: 6px;
+}
+
+.invite-title-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.invite-lily {
+  height: 300px;
+  width: auto;
+  display: block;
+}
+
+.invite-title-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.invite-title-main {
+  margin: 0;
+  line-height: 1.05;
+}
+
+.invite-title-date {
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+#invitation {
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
 
 /* ==========================================================================

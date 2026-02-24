@@ -242,6 +242,28 @@ $(document).ready(function () {
 
   $("#add-to-cal").html(myCalendar);
 
+  /********************** Lily Reveal **********************/
+  var lily = document.querySelector(".lily-fade-in");
+  var invitationSection = document.getElementById("invitation");
+
+  if (lily && invitationSection && "IntersectionObserver" in window) {
+    var lilyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            lily.classList.add("is-visible");
+            lilyObserver.disconnect();
+          }
+        });
+      },
+      { threshold: 0.25 },
+    );
+
+    lilyObserver.observe(invitationSection);
+  } else if (lily) {
+    lily.classList.add("is-visible");
+  }
+
   /********************** RSVP **********************/
   $("#rsvp-form").on("submit", function (e) {
     e.preventDefault();
