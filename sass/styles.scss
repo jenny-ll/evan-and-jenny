@@ -1,5 +1,4 @@
 // Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,600,700);
 
 // Imports
 //@import "compass";
@@ -215,7 +214,7 @@ Navigation
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
   border-radius: 1px;
-  background: #fff;
+  background: #3d3a32;
   cursor: pointer
 }
 .nav-toggle span:before {
@@ -264,22 +263,27 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 750px;
-  background: url('../img/hero-min.jpg') center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  min-height: 720px;
+  background:
+    linear-gradient(90deg, rgba(206, 181, 112, .22) 0, rgba(206, 181, 112, .22) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(206, 181, 112, .16) 0, rgba(206, 181, 112, .16) 1px, transparent 1px),
+    #fbfaf6;
+  background-size: 78px 78px;
   position: relative;
   .container {
     position: relative;
-    min-height: 750px;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+  }
+  .container > .row {
+    width: 100%;
   }
   &:before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.20); // 25% white overlay -> image appears ~75% visible
+    background: linear-gradient(180deg, rgba(251, 250, 246, .92) 0%, rgba(251, 250, 246, .72) 52%, rgba(251, 250, 246, .96) 100%);
     z-index: 0;
   }
 
@@ -294,29 +298,67 @@ Hero
   //   left: 50%;
   // }
   .down-arrow a {
-    color: $txt-light;
+    color: #9b7f3a;
   }
   h1 {
-    color: $txt-light;
-    margin-bottom: 40px;
+    color: #2f3035;
+    font-size: clamp(58px, 9vw, 112px);
+    font-weight: 500;
+    line-height: .95;
+    margin: 8px 0 18px;
+    text-transform: none;
   }
   p.intro {
-    color: $txt-light;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 80px;
+    color: #7d704f;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    line-height: 1.4;
+    margin-bottom: 38px;
+    padding-bottom: 0;
+    text-transform: uppercase;
   }
   .hero-content {
-    padding-top: clamp(140px, 24vh, 260px);
+    width: 100%;
+    padding-top: 70px;
   }
   .hero-content img {
     display: block;
-    width: 55%;
-    margin-top: clamp(80px, 16vh, 220px);
+    width: min(280px, 54vw);
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: clamp(16px, 4vh, 40px);
-    transform: translateY(26px);
+    margin-bottom: 18px;
+    filter: saturate(.82) contrast(.96);
+    opacity: .86;
+    transform: none;
+  }
+  .hero-kicker {
+    color: #806f42;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+  }
+  .hero-kicker:before,
+  .hero-kicker:after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 1px;
+    background: rgba(128, 111, 66, .42);
+  }
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   .hero-rsvp-row {
     position: absolute;
@@ -338,16 +380,37 @@ Hero
   z-index: 999;
   width: 100%;
 }
+.fixed header {
+  border-bottom-color: rgba(255, 255, 255, .18);
+}
+.fixed header a,
+.fixed header .logo-mark,
+.fixed header ul.primary-nav li a,
+.fixed header ul.member-actions li a,
+.fixed header ul.member-actions li a.btn-white {
+  color: $txt-light;
+}
+.fixed header ul.member-actions li a.btn-white {
+  border-color: rgba(255, 255, 255, .72);
+}
+.fixed .nav-toggle span,
+.fixed .nav-toggle span:before,
+.fixed .nav-toggle span:after {
+  background: #fff;
+}
+.fixed .nav-toggle.active span {
+  background-color: transparent;
+}
 header {
   padding: 50px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(61, 58, 50, 0.13);
   position: relative;
   width: 1170px;
   margin: 0 auto;
   transition: padding 300ms ease-in-out;
 
   a {
-    color: $txt-light;
+    color: #3d3a32;
     text-transform: uppercase;
     font-size: $nav-font-size;
 
@@ -357,6 +420,15 @@ header {
   }
   .logo {
     display: inline-block;
+  }
+  .logo-mark {
+    display: inline-block;
+    color: #2f3035;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-transform: none;
   }
   .logo img {
     height: 55px;
@@ -369,7 +441,7 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        color: #3d3a32;
         padding-right: 25px;
 
         &:hover {
@@ -386,10 +458,13 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        color: #3d3a32;
 
         &:hover {
           color: $accent-color;
+        }
+        &.btn-white {
+          border-color: rgba(61, 58, 50, .25);
         }
       }
     }
@@ -404,8 +479,30 @@ header {
     transition: all 300ms ease-in-out;
   }
 }
-.down-arrow {
+.btn-accent {
+  border-color: #9b7f3a;
   color: #fff;
+  background: #9b7f3a;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  border-color: #2f3035;
+  background: #2f3035;
+  color: #fff;
+}
+.btn-ghost {
+  border-color: rgba(61, 58, 50, .45);
+  color: #3d3a32;
+  background: transparent;
+}
+.btn-ghost:hover,
+.btn-ghost:focus {
+  border-color: #9b7f3a;
+  background: transparent;
+  color: #9b7f3a;
+}
+.down-arrow {
+  color: #9b7f3a;
   font-size: 30px;
   position: absolute;
   bottom: 30px;
@@ -441,7 +538,7 @@ Intro
 }
 
 #intro {
-  margin-top: -40px;
+  margin-top: 0;
   padding-top: 0;
   img {
     width: 100%;
@@ -467,7 +564,7 @@ Intro
 }
 
 .invite-lily {
-  height: 300px;
+  height: 150px;
   width: auto;
   display: block;
 }
@@ -492,7 +589,7 @@ Intro
 
 #invitation {
   padding-top: 20px;
-  padding-bottom: 8px;
+  padding-bottom: 32px;
 }
 
 /* ==========================================================================
