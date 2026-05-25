@@ -13,6 +13,291 @@
     font-display: swap;
 }
 
+/* Multi-page editorial system */
+:root {
+    --frame-width: min(1120px, 90vw);
+}
+
+body {
+    background: var(--paper) !important;
+}
+
+body:before,
+body:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 1px;
+    pointer-events: none;
+    background: var(--line);
+}
+
+body:before {
+    left: calc((100vw - var(--frame-width)) / 2);
+}
+
+body:after {
+    right: calc((100vw - var(--frame-width)) / 2);
+}
+
+.navigation,
+.site-page,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    width: var(--frame-width);
+}
+
+header ul.primary-nav li a {
+    padding-right: 34px;
+}
+
+.site-page {
+    padding-top: 70px;
+}
+
+.page-hero,
+.page-heading,
+.letter-section,
+.page-content {
+    border-bottom: 1px solid var(--line);
+}
+
+#invitation:before,
+#invitation:after,
+.events .container:before,
+.events .container:after {
+    display: none;
+}
+
+.page-hero {
+    min-height: 455px;
+    display: flex;
+    align-items: center;
+    padding: 82px 0 70px;
+}
+
+.page-heading {
+    padding: 118px 0 72px;
+    text-align: center;
+}
+
+.page-heading h1 {
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(48px, 7vw, 86px);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.eyebrow {
+    max-width: none;
+    margin: 0 0 18px;
+    padding: 0;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4.5px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.page-content,
+.letter-section {
+    padding: 78px 0;
+}
+
+.letter-section p,
+.page-content p,
+.about-us-text p {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 19px;
+    line-height: 1.76;
+}
+
+.intro-script {
+    margin-bottom: 18px;
+    color: var(--ink) !important;
+    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", cursive;
+    font-size: clamp(32px, 4.2vw, 52px) !important;
+    line-height: 1.05 !important;
+}
+
+.invite-lily {
+    height: 118px;
+}
+
+.invite-title-main {
+    max-width: 800px;
+    font-size: clamp(46px, 6.4vw, 78px);
+    color: #a24f3f;
+}
+
+.invite-title-date {
+    max-width: 560px;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.event-grid,
+.stay-grid {
+    margin-bottom: 48px;
+}
+
+.event-panel,
+.stay-panel {
+    padding: 0 48px;
+    text-align: center;
+}
+
+.event-panel + .event-panel,
+.stay-panel + .stay-panel {
+    border-left: 1px solid var(--line);
+}
+
+.event-date,
+.event-meta,
+.panel-note {
+    color: var(--accent) !important;
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    line-height: 1.6 !important;
+    text-transform: uppercase;
+}
+
+.event-meta a {
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+}
+
+.event-meta a:hover,
+.event-meta a:focus {
+    color: var(--ink);
+}
+
+.event-panel h2,
+.stay-panel h2,
+.rsvp h2 {
+    margin: 10px 0 16px;
+    color: var(--ink);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.stay-panel p {
+    font-size: 17px;
+}
+
+.about-us-photo {
+    max-width: 620px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+footer .content {
+    border-top: 0;
+    padding: 34px 0 22px;
+}
+
+@media screen and (max-width: 991px) {
+    body:before,
+    body:after {
+        display: none;
+    }
+
+    .site-page {
+        padding-top: 63px;
+    }
+
+    .page-hero {
+        min-height: 390px;
+        padding: 72px 0 58px;
+    }
+
+    .page-heading {
+        padding: 102px 0 58px;
+    }
+
+    .event-panel,
+    .stay-panel {
+        padding: 0 24px 38px;
+    }
+
+    .event-panel + .event-panel,
+    .stay-panel + .stay-panel {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 38px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    p,
+    .letter-section p,
+    .page-content p,
+    .about-us-text p,
+    #intro p {
+        width: auto;
+        max-width: 260px;
+        font-size: 17px;
+        line-height: 1.72;
+    }
+
+    header .logo-mark {
+        font-size: 22px;
+    }
+
+    .page-hero {
+        min-height: 342px;
+    }
+
+    .invite-lily {
+        height: 86px;
+    }
+
+    .invite-title-main {
+        max-width: 250px;
+        font-size: clamp(24px, 6.6vw, 28px);
+    }
+
+    .invite-title-date {
+        max-width: 82vw;
+        margin-top: 26px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-heading h1 {
+        font-size: clamp(42px, 13vw, 60px);
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 58px 0;
+    }
+
+    .intro-script {
+        max-width: 250px;
+        font-size: clamp(24px, 6.8vw, 28px) !important;
+    }
+}
+
+.page-home .invite-title-main,
+.page-home .invite-title-main span {
+    color: var(--ink);
+}
+
+.page-home .intro-script {
+    color: #9c6b2f !important;
+}
+
 :root {
     --paper: #fbfaf6;
     --paper-warm: #f5f0e8;
@@ -147,9 +432,16 @@ header ul.member-actions li a.btn-white {
 .btn-white:focus,
 .btn-fill:hover,
 .btn-fill:focus {
-    color: var(--paper);
+    color: #fff;
     border-color: var(--ink);
     background: var(--ink);
+}
+
+header ul.member-actions li a.btn-white:hover,
+header ul.member-actions li a.btn-white:focus,
+.fixed header ul.member-actions li a.btn-white:hover,
+.fixed header ul.member-actions li a.btn-white:focus {
+    color: #fff;
 }
 
 .btn-accent,
@@ -264,6 +556,63 @@ header ul.member-actions li a.btn-white {
         opacity: 1;
         filter: blur(0);
     }
+}
+
+/* About Us Section */
+.about-us-section {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 72px 0 60px;
+}
+
+.about-us-section .row {
+    text-align: center;
+}
+
+.about-us-section .col-md-12 {
+    margin-bottom: 48px;
+}
+
+.about-us-photo {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 5 / 4;
+    height: auto;
+    object-fit: cover;
+    object-position: center 42%;
+    border-radius: 8px;
+    margin: 0 auto 48px;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-text {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-us-text p {
+    font-size: 20px;
+    line-height: 1.72;
+    color: var(--txt-primary);
+    margin-bottom: 16px;
+}
+
+.about-us-text p:last-child {
+    margin-bottom: 0;
+}
+
+.story-kicker {
+    max-width: none;
+    margin-bottom: 18px;
+    padding-bottom: 0;
+    color: var(--accent) !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.4 !important;
+    text-transform: uppercase;
 }
 
 #intro {
@@ -490,5 +839,288 @@ footer p {
 
     .btn-small {
         padding: 8px 20px;
+    }
+}
+
+/* Final multi-page layout overrides */
+:root {
+    --frame-width: min(1120px, 90vw);
+}
+
+body {
+    background: var(--paper) !important;
+}
+
+body:before,
+body:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 1px;
+    pointer-events: none;
+    background: var(--line);
+}
+
+body:before {
+    left: calc((100vw - var(--frame-width)) / 2);
+}
+
+body:after {
+    right: calc((100vw - var(--frame-width)) / 2);
+}
+
+.navigation,
+.site-page,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    width: var(--frame-width);
+}
+
+header ul.primary-nav li a {
+    padding-right: 34px;
+}
+
+.site-page {
+    padding-top: 70px;
+}
+
+.page-hero,
+.page-heading,
+.letter-section,
+.page-content {
+    border-bottom: 1px solid var(--line);
+}
+
+#invitation:before,
+#invitation:after,
+.events .container:before,
+.events .container:after {
+    display: none;
+}
+
+.page-hero {
+    min-height: 455px;
+    display: flex;
+    align-items: center;
+    padding: 82px 0 70px;
+}
+
+.page-heading {
+    padding: 118px 0 72px;
+    text-align: center;
+}
+
+.page-heading h1 {
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(48px, 7vw, 86px);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.eyebrow {
+    max-width: none;
+    margin: 0 0 18px;
+    padding: 0;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4.5px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.page-content,
+.letter-section {
+    padding: 78px 0;
+}
+
+.letter-section p,
+.page-content p,
+.about-us-text p {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 19px;
+    line-height: 1.76;
+}
+
+.intro-script {
+    margin-bottom: 18px;
+    color: var(--ink) !important;
+    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", cursive;
+    font-size: clamp(32px, 4.2vw, 52px) !important;
+    line-height: 1.05 !important;
+}
+
+.invite-lily {
+    height: 84px;
+}
+
+.invite-title-main {
+    max-width: 800px;
+    font-size: clamp(46px, 6.4vw, 78px);
+}
+
+.invite-title-date {
+    max-width: 560px;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.event-grid,
+.stay-grid {
+    margin-bottom: 48px;
+}
+
+.event-panel,
+.stay-panel {
+    padding: 0 48px;
+    text-align: center;
+}
+
+.event-panel + .event-panel,
+.stay-panel + .stay-panel {
+    border-left: 1px solid var(--line);
+}
+
+.event-date,
+.event-meta,
+.panel-note {
+    color: var(--accent) !important;
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    line-height: 1.6 !important;
+    text-transform: uppercase;
+}
+
+.event-panel h2,
+.stay-panel h2,
+.rsvp h2 {
+    margin: 10px 0 16px;
+    color: var(--ink);
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.stay-panel p {
+    font-size: 17px;
+}
+
+.about-us-photo {
+    max-width: 620px;
+    aspect-ratio: 5 / 4;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+footer .content {
+    border-top: 0;
+    padding: 34px 0 22px;
+}
+
+@media screen and (max-width: 991px) {
+    body:before,
+    body:after {
+        display: none;
+    }
+
+    .site-page {
+        padding-top: 63px;
+    }
+
+    .page-hero {
+        min-height: 390px;
+        padding: 72px 0 58px;
+    }
+
+    .page-heading {
+        padding: 102px 0 58px;
+    }
+
+    .event-panel,
+    .stay-panel {
+        padding: 0 24px 38px;
+    }
+
+    .event-panel + .event-panel,
+    .stay-panel + .stay-panel {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 38px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    p,
+    .letter-section p,
+    .page-content p,
+    .about-us-text p,
+    #intro p {
+        width: auto;
+        max-width: 300px;
+        font-size: 17px;
+        line-height: 1.72;
+    }
+
+    header .logo-mark {
+        font-size: 22px;
+    }
+
+    .page-hero {
+        min-height: 342px;
+    }
+
+    .invite-lily {
+        height: 64px;
+    }
+
+    .invite-title-main {
+        max-width: 82vw;
+        font-size: clamp(34px, 10vw, 44px);
+    }
+
+    .invite-title-date {
+        max-width: 82vw;
+        margin-top: 26px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-heading h1 {
+        font-size: clamp(42px, 13vw, 60px);
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 58px 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    p,
+    .letter-section p,
+    .page-content p,
+    .about-us-text p,
+    #intro p {
+        max-width: 260px;
+        font-size: 17px;
+        line-height: 1.72;
+    }
+
+    .invite-title-main {
+        max-width: 250px;
+        font-size: clamp(24px, 6.6vw, 28px);
+    }
+
+    .intro-script {
+        max-width: 250px;
+        font-size: clamp(24px, 6.8vw, 28px) !important;
     }
 }
