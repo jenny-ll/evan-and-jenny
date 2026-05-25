@@ -1,0 +1,494 @@
+@import url("https://fonts.cdnfonts.com/css/amsterdam-handwriting");
+
+/* Minimal editorial refresh */
+@font-face {
+    font-family: "Amsterdam Handwriting Local";
+    src:
+        local("Amsterdam Handwriting"),
+        local("AmsterdamHandwriting"),
+        url("../fonts/amsterdam-handwriting.woff2") format("woff2"),
+        url("../fonts/amsterdam-handwriting.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --paper: #fbfaf6;
+    --paper-warm: #f5f0e8;
+    --ink: #3b2417;
+    --muted: #7c6658;
+    --line: rgba(59, 36, 23, 0.18);
+    --accent: #9f6e46;
+    --soft-accent: #cdb795;
+}
+
+html,
+body {
+    background: var(--paper);
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--muted);
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    background:
+        linear-gradient(90deg, transparent 0, transparent calc(50% - 560px), var(--line) calc(50% - 560px), transparent calc(50% - 559px), transparent calc(50% + 559px), var(--line) calc(50% + 560px), transparent calc(50% + 561px)),
+        var(--paper);
+}
+
+p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+h3 {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.4;
+}
+
+h4,
+h5 {
+    color: var(--ink);
+    letter-spacing: 1.5px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: var(--ink);
+}
+
+.navigation,
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(251, 250, 246, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    width: min(1120px, 90vw);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+header a,
+header ul.primary-nav li a,
+header ul.member-actions li a,
+.fixed header a,
+.fixed header .logo-mark,
+.fixed header ul.primary-nav li a,
+.fixed header ul.member-actions li a {
+    color: var(--ink);
+}
+
+header a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.8px;
+}
+
+header .logo-mark {
+    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", cursive;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: normal;
+    text-transform: none;
+}
+
+header ul.primary-nav {
+    margin-left: 56px;
+}
+
+header ul.primary-nav li a {
+    padding-right: 30px;
+}
+
+header ul.primary-nav li a:hover,
+header ul.member-actions li a:hover {
+    color: var(--accent);
+}
+
+header .member-actions {
+    top: 14px;
+}
+
+.btn,
+.btn-white,
+.btn-fill {
+    border-width: 1px;
+    border-radius: 0;
+    letter-spacing: 2.5px;
+    background: transparent;
+}
+
+.btn-white,
+.fixed header ul.member-actions li a.btn-white,
+header ul.member-actions li a.btn-white {
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+.btn:hover,
+.btn:focus,
+.btn-white:hover,
+.btn-white:focus,
+.btn-fill:hover,
+.btn-fill:focus {
+    color: var(--paper);
+    border-color: var(--ink);
+    background: var(--ink);
+}
+
+.btn-accent,
+.btn-fill {
+    color: var(--paper);
+    border-color: var(--ink);
+    background: var(--ink);
+}
+
+.section-padding {
+    padding: 76px 0;
+}
+
+#invitation {
+    position: relative;
+    padding: 148px 0 74px;
+    border-bottom: 1px solid var(--line);
+}
+
+#invitation:before,
+#invitation:after {
+    content: "";
+    position: absolute;
+    top: 118px;
+    bottom: 52px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(159, 110, 70, 0.34), transparent);
+}
+
+#invitation:before {
+    left: calc(50% - 430px);
+}
+
+#invitation:after {
+    right: calc(50% - 430px);
+}
+
+.invite-title-block {
+    display: block;
+    text-align: center;
+}
+
+.invite-lily {
+    height: 100px;
+    margin: 0 auto 22px;
+    opacity: 0.72;
+    filter: sepia(0.16) saturate(0.75) contrast(0.88);
+}
+
+.invite-title-text {
+    align-items: center;
+}
+
+.invite-title-main {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--ink);
+    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", "Lucida Calligraphy", "Brush Script MT", cursive;
+    font-size: clamp(36px, 5.2vw, 60px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: 0;
+    text-transform: none;
+    overflow-wrap: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.invite-title-main span:not(.heart) {
+    display: block;
+}
+
+.heart {
+    color: #e63946;
+    display: inline;
+    flex-shrink: 0;
+}
+
+/* Amsterdam handwriting for headline pieces */
+.amsterdam {
+    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", "Lucida Calligraphy", "Brush Script MT", cursive;
+    font-size: clamp(22px, 3.6vw, 40px);
+    line-height: 1.05;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.invite-title-date {
+    display: block;
+    max-width: 760px;
+    margin: 50px auto 0;
+    padding: 12px 18px 0;
+    border-top: 1px solid var(--soft-accent);
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 4.5px;
+    line-height: 1.8;
+    text-align: right;
+}
+
+.heart-fade-in {
+    opacity: 0;
+    filter: blur(2px);
+    animation: heart-fade 1.5s ease 0.3s forwards;
+}
+
+@keyframes heart-fade {
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+#intro {
+    padding: 72px 0 60px;
+    border-bottom: 1px solid var(--line);
+}
+
+#intro p {
+    max-width: min(680px, calc(100vw - 56px));
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.72;
+}
+
+section.events,
+.events {
+    background: linear-gradient(180deg, var(--paper-warm), var(--paper));
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.events .container {
+    position: relative;
+}
+
+.events .container:before {
+    content: "05.29";
+    position: absolute;
+    top: 34px;
+    left: 15px;
+    color: rgba(59, 36, 23, 0.24);
+    font-size: 12px;
+    letter-spacing: 5px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.events .container:after {
+    content: "05.30";
+    position: absolute;
+    top: 34px;
+    right: 15px;
+    color: rgba(59, 36, 23, 0.24);
+    font-size: 12px;
+    letter-spacing: 5px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.events .leftcol {
+    padding-right: 72px;
+    border-right: 1px solid var(--line);
+}
+
+.events .rightcol {
+    padding-left: 72px;
+}
+
+.events h4 {
+    margin-bottom: 14px;
+}
+
+.events h4 strong {
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.events h5 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.7;
+}
+
+.events .time {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+#video-bg {
+    display: none;
+}
+
+#map {
+    border-bottom: 1px solid var(--line);
+}
+
+#map .header,
+.events .header {
+    padding-bottom: 36px;
+}
+
+.rsvp {
+    background: var(--paper);
+    padding-top: 76px;
+    padding-bottom: 92px;
+}
+
+.rsvp .rsvp-form .form-input-group {
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+}
+
+.rsvp .rsvp-form .form-input-group input {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.35);
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.rsvp .rsvp-form .form-input-group i {
+    color: var(--accent);
+}
+
+footer .content {
+    border-top: 1px solid var(--line);
+    padding-top: 34px;
+}
+
+footer .to-top-wrapper {
+    display: none;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 991px) {
+    .header-nav {
+        background: var(--paper);
+    }
+
+    nav ul li a,
+    nav ul.primary-nav li a,
+    nav ul.member-actions li a {
+        color: var(--ink);
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .navicon {
+        top: 23px;
+    }
+
+    .nav-toggle span,
+    .nav-toggle span:before,
+    .nav-toggle span:after {
+        height: 2px;
+        background: var(--ink);
+    }
+
+    header {
+        padding-left: 0;
+    }
+
+    .events .leftcol,
+    .events .rightcol {
+        padding: 0 15px;
+        border-right: 0;
+        text-align: center;
+    }
+
+    #invitation {
+        padding-top: 132px;
+    }
+
+    #invitation:before,
+    #invitation:after,
+    .events .container:before {
+        display: none;
+    }
+
+    .invite-title-main {
+        max-width: 82vw;
+        font-size: clamp(25px, 6.8vw, 32px);
+        line-height: 1.18;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        padding: 18px 0;
+    }
+
+    header .logo-mark {
+        font-size: 18px;
+    }
+
+    .invite-lily {
+        height: 75px;
+    }
+
+    .invite-title-date {
+        max-width: 82vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 10px;
+        letter-spacing: 2.2px;
+        overflow-wrap: break-word;
+    }
+
+    .invite-title-main {
+        max-width: 80vw;
+        font-size: clamp(21px, 5.5vw, 25px);
+    }
+
+    .section-padding {
+        padding: 58px 0;
+    }
+
+    #intro p {
+        width: 260px;
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 1.78;
+    }
+
+    .btn-small {
+        padding: 8px 20px;
+    }
+}
