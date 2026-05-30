@@ -3,40 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Jenny and Evan Wedding</title>
-    <meta name="description" content="We would love for you to join us on our special day.">
+    <title>RSVP | Jenny and Evan Wedding</title>
+    <meta name="description" content="RSVP for Jenny and Evan's wedding.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Jenny and Evan Wedding">
-    <meta property="og:description" content="We would love for you to join us on our special day.">
-    <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="favicon-heart.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-
     <script>
         function loadCssFromCDN(css) {
             const link = document.createElement('link');
-            if (css === 'animate.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
-            } else if (css === 'font-awesome.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-            }
+            if (css === 'animate.css') link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+            if (css === 'font-awesome.css') link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
             link.rel = 'stylesheet';
             document.getElementsByTagName('head')[0].appendChild(link);
         }
-
         function loadJsFromCDN(js) {
-            if (js === 'waypoints.js') {
-                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
-            } else if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
-            }
+            if (js === 'waypoints.js') document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            if (js === 'jquery.js') document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
         }
     </script>
-
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -48,7 +34,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body id="top" class="page-home">
+<body id="top" class="page-rsvp">
 <section class="navigation">
     <header>
         <div class="header-content">
@@ -66,58 +52,32 @@
                     </ul>
                 </nav>
             </div>
-            <div class="navicon">
-                <a class="nav-toggle" href="#"><span></span></a>
-            </div>
+            <div class="navicon"><a class="nav-toggle" href="#"><span></span></a></div>
         </div>
     </header>
 </section>
 
 <main class="site-page">
-    <section id="invitation" class="page-hero">
+    <section class="page-heading">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="invite-title-block">
-                        <img src="img/lily.png" alt="Lily" class="invite-lily lily-fade-in">
-                        <div class="invite-title-text">
-                            <h1 class="invite-title-main"><span data-i18n="home.names">Jenny and Evan</span></h1>
-                            <p class="invite-title-date" data-i18n="home.date">30th of May, 2027 &bull; Vancouver</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="eyebrow" data-i18n="rsvp.eyebrow">Please Reply</p>
+            <h1 data-i18n="rsvp.title">RSVP</h1>
         </div>
     </section>
 
-    <section id="intro" class="letter-section">
+    <section class="rsvp page-content text-center" id="rsvp">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <p class="intro-script" data-i18n="home.introTitle">We're getting married!</p>
-                    <p data-i18n="home.copy1">
-                        We're so excited to celebrate with you. This website has the information you'll need for the wedding weekend, with more details to come as we get closer to 05.30.27.
-                        If you have any questions in the meantime, please don't hesitate to reach out to us directly.
-                    </p>
-                    <p data-i18n="home.copy2">
-                        We can't wait to celebrate, dance, and make some unforgettable memories with you soon.
-                    </p>
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 data-i18n="rsvp.comingSoon">Coming Soon</h2>
+                    <p data-i18n="rsvp.copy">Formal invitations will be sent out in early 2027 to your physical address. The invitation will ask guests to confirm their attendance here via an RSVP form.</p>
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center content">
-                <p data-i18n="footer.names">Jenny &amp; Evan</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
+<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">Jenny &amp; Evan</p></div></div></div></footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
