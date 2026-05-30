@@ -56,12 +56,13 @@
             <div class="header-nav">
                 <nav>
                     <ul class="primary-nav">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="stay.html">Stay</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+                        <li><a href="stay.html" data-i18n="nav.stay">Stay</a></li>
                     </ul>
                     <ul class="member-actions">
-                        <li><a href="rsvp.html" class="btn-white btn-small">RSVP</a></li>
+                        <li><button type="button" class="language-toggle" data-translate-toggle aria-label="Translate to Chinese">中文</button></li>
+                        <li><a href="rsvp.html" class="btn-white btn-small" data-i18n="nav.rsvp">RSVP</a></li>
                     </ul>
                 </nav>
             </div>
@@ -80,8 +81,8 @@
                     <div class="invite-title-block">
                         <img src="img/lily.png" alt="Lily" class="invite-lily lily-fade-in">
                         <div class="invite-title-text">
-                            <h1 class="invite-title-main"><span>Jenny and Evan</span></h1>
-                            <p class="invite-title-date">30th of May, 2027 &bull; Vancouver</p>
+                            <h1 class="invite-title-main"><span data-i18n="home.names">Jenny and Evan</span></h1>
+                            <p class="invite-title-date" data-i18n="home.date">30th of May, 2027 &bull; Vancouver</p>
                         </div>
                     </div>
                 </div>
@@ -93,12 +94,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <p class="intro-script">We're getting married!</p>
-                    <p>
+                    <p class="intro-script" data-i18n="home.introTitle">We're getting married!</p>
+                    <p data-i18n="home.copy1">
                         We're so excited to celebrate with you. This website has the information you'll need for the wedding weekend, with more details to come as we get closer to 05.30.27.
                         If you have any questions in the meantime, please don't hesitate to reach out to us directly.
                     </p>
-                    <p>
+                    <p data-i18n="home.copy2">
                         We can't wait to celebrate, dance, and make some unforgettable memories with you soon.
                     </p>
                 </div>
@@ -111,7 +112,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center content">
-                <p>Jenny &amp; Evan</p>
+                <p data-i18n="footer.names">Jenny &amp; Evan</p>
             </div>
         </div>
     </div>
@@ -124,6 +125,7 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
+<script src="js/translate.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

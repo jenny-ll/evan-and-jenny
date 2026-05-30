@@ -42,12 +42,13 @@
             <div class="header-nav">
                 <nav>
                     <ul class="primary-nav">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="stay.html">Stay</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+                        <li><a href="stay.html" data-i18n="nav.stay">Stay</a></li>
                     </ul>
                     <ul class="member-actions">
-                        <li><a href="rsvp.html" class="btn-white btn-small">RSVP</a></li>
+                        <li><button type="button" class="language-toggle" data-translate-toggle aria-label="Translate to Chinese">中文</button></li>
+                        <li><a href="rsvp.html" class="btn-white btn-small" data-i18n="nav.rsvp">RSVP</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,8 +60,8 @@
 <main class="site-page">
     <section class="page-heading">
         <div class="container">
-            <p class="eyebrow">Vancouver</p>
-            <h1>Where to Stay</h1>
+            <p class="eyebrow" data-i18n="stay.eyebrow">Vancouver</p>
+            <h1 data-i18n="stay.title">Where to Stay</h1>
         </div>
     </section>
 
@@ -68,31 +69,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
-                    <p>We will not be providing designated accommodations for our guests. We hope this gives everyone more flexibility in their travel plans. To help friends and family coming from out of town, here are a few areas we recommend. We highly encourage booking in advance!</p>
+                    <p data-i18n="stay.intro">We will not be providing designated accommodations for our guests. We hope this gives everyone more flexibility in their travel plans. To help friends and family coming from out of town, here are a few areas we recommend. We highly encourage booking in advance!</p>
                 </div>
             </div>
             <div class="row stay-grid">
                 <div class="col-md-4 stay-panel">
-                    <h2>Near Cecil Green Park House</h2>
-                    <p class="panel-note">For those who want to enjoy the beauty of UBC's campus and be close to the venue.</p>
-                    <p>Gage Suites at UBC<br>West Coast Suites at UBC</p>
+                    <h2 data-i18n="stay.nearTitle">Near Cecil Green Park House</h2>
+                    <p class="panel-note" data-i18n="stay.nearNote">For those who want to enjoy the beauty of UBC's campus and be close to the venue.</p>
+                    <p data-i18n-html="stay.nearList">Gage Suites at UBC<br>West Coast Suites at UBC</p>
                 </div>
                 <div class="col-md-4 stay-panel">
-                    <h2>Kitsilano / West Broadway</h2>
-                    <p class="panel-note">A gorgeous area with short-term stay options, beach access, and a straightforward drive to Cecil Green Park House.</p>
-                    <p>Short-term stays<br>Airbnb or Vrbo</p>
+                    <h2 data-i18n="stay.kitsTitle">Kitsilano / West Broadway</h2>
+                    <p class="panel-note" data-i18n="stay.kitsNote">A gorgeous area with short-term stay options, beach access, and a straightforward drive to Cecil Green Park House.</p>
+                    <p data-i18n-html="stay.kitsList">Short-term stays<br>Airbnb or Vrbo</p>
                 </div>
                 <div class="col-md-4 stay-panel">
-                    <h2>Downtown Vancouver</h2>
-                    <p class="panel-note">Best for sightseeing, restaurants, and shopping, about a 20-30 minute drive from the venue.</p>
-                    <p>JW Marriott Parq<br>Hyatt Regency Vancouver<br>Fairmont Hotel Vancouver<br>The Westin Bayshore</p>
+                    <h2 data-i18n="stay.downtownTitle">Downtown Vancouver</h2>
+                    <p class="panel-note" data-i18n="stay.downtownNote">Best for sightseeing, restaurants, and shopping, about a 20-30 minute drive from the venue.</p>
+                    <p data-i18n-html="stay.downtownList">JW Marriott Parq<br>Hyatt Regency Vancouver<br>Fairmont Hotel Vancouver<br>The Westin Bayshore</p>
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p>Jenny &amp; Evan</p></div></div></div></footer>
+<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">Jenny &amp; Evan</p></div></div></div></footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
@@ -100,6 +101,7 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
+<script src="js/translate.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

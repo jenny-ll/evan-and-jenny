@@ -42,12 +42,13 @@
             <div class="header-nav">
                 <nav>
                     <ul class="primary-nav">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="stay.html">Stay</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+                        <li><a href="stay.html" data-i18n="nav.stay">Stay</a></li>
                     </ul>
                     <ul class="member-actions">
-                        <li><a href="rsvp.html" class="btn-white btn-small">RSVP</a></li>
+                        <li><button type="button" class="language-toggle" data-translate-toggle aria-label="Translate to Chinese">中文</button></li>
+                        <li><a href="rsvp.html" class="btn-white btn-small" data-i18n="nav.rsvp">RSVP</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,8 +60,8 @@
 <main class="site-page">
     <section class="page-heading">
         <div class="container">
-            <p class="eyebrow">Wedding Weekend</p>
-            <h1>Events</h1>
+            <p class="eyebrow" data-i18n="events.eyebrow">Wedding Weekend</p>
+            <h1 data-i18n="events.title">Events</h1>
         </div>
     </section>
 
@@ -68,21 +69,21 @@
         <div class="container">
             <div class="row event-grid">
                 <div class="col-md-6 col-sm-12 event-panel">
-                    <p class="event-date">Saturday, May 29, 2027</p>
-                    <h2>Welcome Party</h2>
-                    <p class="event-meta">Home &bull; 7:00 PM</p>
-                    <p>Join us for a relaxed welcome party before the big day. We will kick the weekend off with drinks, bites, and time to catch up with family and friends.</p>
+                    <p class="event-date" data-i18n="events.date1">Saturday, May 29, 2027</p>
+                    <h2 data-i18n="events.welcomeTitle">Welcome Party</h2>
+                    <p class="event-meta" data-i18n="events.welcomeMeta">Home &bull; 7:00 PM</p>
+                    <p data-i18n="events.welcomeCopy">Join us for a relaxed welcome party before the big day. We will kick the weekend off with drinks, bites, and time to catch up with family and friends.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 event-panel">
-                    <p class="event-date">Sunday, May 30, 2027</p>
-                    <h2>Wedding Day</h2>
-                    <p class="event-meta"><a href="https://www.google.com/maps/place/Cecil+Green+Park+House/@49.2705956,-123.264963,15.26z/data=!4m6!3m5!1s0x548672b1a4606653:0xba00269da2e1e9f0!8m2!3d49.2713887!4d-123.2577044!16s%2Fg%2F11b5pj9y_v?entry=ttu&amp;g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Cecil Green Park House</a> &bull; 4:00 PM</p>
-                    <p>Our wedding celebration begins in the afternoon and continues into the evening with cocktail hour and reception.</p>
+                    <p class="event-date" data-i18n="events.date2">Sunday, May 30, 2027</p>
+                    <h2 data-i18n="events.weddingTitle">Wedding Day</h2>
+                    <p class="event-meta" data-i18n-html="events.weddingMeta"><a href="https://www.google.com/maps/place/Cecil+Green+Park+House/@49.2705956,-123.264963,15.26z/data=!4m6!3m5!1s0x548672b1a4606653:0xba00269da2e1e9f0!8m2!3d49.2713887!4d-123.2577044!16s%2Fg%2F11b5pj9y_v?entry=ttu&amp;g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Cecil Green Park House</a> &bull; 4:00 PM</p>
+                    <p data-i18n="events.weddingCopy">Our wedding celebration begins in the afternoon and continues into the evening with cocktail hour and reception.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">Dress code</a>
+                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal" data-i18n="events.dressButton">Dress code</a>
                 </div>
             </div>
         </div>
@@ -93,18 +94,18 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-                    <h3 class="text-center">Dress Code</h3>
-                    <h5>Welcome Party</h5>
-                    <p><strong>Dressy casual</strong><br>Elevated casual wear such as collared shirts, blouses, trousers, skirts, or dresses. Think stylish yet comfortable.</p>
-                    <h5>Wedding Day</h5>
-                    <p><strong>Cocktail attire</strong><br>Elegant, polished attire is encouraged. Think suits and ties, midi or maxi dresses, cocktail dresses, or jumpsuits.</p>
+                    <h3 class="text-center" data-i18n="events.dressTitle">Dress Code</h3>
+                    <h5 data-i18n="events.welcomeTitle">Welcome Party</h5>
+                    <p data-i18n-html="events.dressWelcome"><strong>Dressy casual</strong><br>Elevated casual wear such as collared shirts, blouses, trousers, skirts, or dresses. Think stylish yet comfortable.</p>
+                    <h5 data-i18n="events.weddingTitle">Wedding Day</h5>
+                    <p data-i18n-html="events.dressWedding"><strong>Cocktail attire</strong><br>Elegant, polished attire is encouraged. Think suits and ties, midi or maxi dresses, cocktail dresses, or jumpsuits.</p>
                 </div>
             </div>
         </div>
     </div>
 </main>
 
-<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p>Jenny &amp; Evan</p></div></div></div></footer>
+<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">Jenny &amp; Evan</p></div></div></div></footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
@@ -112,6 +113,7 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
+<script src="js/translate.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
