@@ -76,21 +76,24 @@ header ul.primary-nav li a {
 }
 
 .page-hero {
-    min-height: 455px;
+    min-height: 360px;
     display: flex;
     align-items: center;
-    padding: 82px 0 70px;
+    padding: 56px 0 48px;
 }
 
 .page-heading {
-    padding: 118px 0 72px;
+    padding: 88px 0 54px;
+    background:
+        linear-gradient(180deg, var(--sage-light), transparent 72%),
+        var(--paper);
     text-align: center;
 }
 
 .page-heading h1 {
     margin: 0;
     color: var(--ink);
-    font-size: clamp(48px, 7vw, 86px);
+    font-size: clamp(40px, 5.8vw, 68px);
     font-weight: 500;
     line-height: 0.95;
 }
@@ -109,7 +112,7 @@ header ul.primary-nav li a {
 
 .page-content,
 .letter-section {
-    padding: 78px 0;
+    padding: 44px 0;
 }
 
 .letter-section p,
@@ -129,30 +132,39 @@ header ul.primary-nav li a {
     line-height: 1.05 !important;
 }
 
+.intro-copy-main {
+    margin-top: 28px;
+}
+
 .invite-lily {
     height: 118px;
 }
 
 .invite-title-main {
     max-width: 800px;
-    font-size: clamp(46px, 6.4vw, 78px);
+    font-size: clamp(30px, 4.4vw, 48px);
     color: #a24f3f;
 }
 
 .invite-title-date {
-    max-width: 560px;
-    margin-top: 34px;
+    max-width: 440px;
+    margin-top: 38px;
+    padding-top: 10px;
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    line-height: 1.6;
     text-align: center;
 }
 
 .event-grid,
 .stay-grid {
-    margin-bottom: 48px;
+    margin-top: 14px;
+    margin-bottom: 30px;
 }
 
 .event-panel,
 .stay-panel {
-    padding: 0 48px;
+    padding: 0 36px;
     text-align: center;
 }
 
@@ -195,6 +207,12 @@ header ul.primary-nav li a {
     font-size: 17px;
 }
 
+.stay-shuttle-note {
+    margin: 28px auto 0;
+    color: var(--accent) !important;
+    font-size: 17px !important;
+}
+
 .about-us-photo {
     max-width: 620px;
     border-radius: 0;
@@ -217,24 +235,24 @@ footer .content {
     }
 
     .page-hero {
-        min-height: 390px;
-        padding: 72px 0 58px;
+        min-height: 320px;
+        padding: 52px 0 42px;
     }
 
     .page-heading {
-        padding: 102px 0 58px;
+        padding: 78px 0 46px;
     }
 
     .event-panel,
     .stay-panel {
-        padding: 0 24px 38px;
+        padding: 0 22px 30px;
     }
 
     .event-panel + .event-panel,
     .stay-panel + .stay-panel {
         border-left: 0;
         border-top: 1px solid var(--line);
-        padding-top: 38px;
+        padding-top: 30px;
     }
 }
 
@@ -255,7 +273,7 @@ footer .content {
     }
 
     .page-hero {
-        min-height: 342px;
+        min-height: 290px;
     }
 
     .invite-lily {
@@ -269,23 +287,470 @@ footer .content {
 
     .invite-title-date {
         max-width: 82vw;
-        margin-top: 26px;
+        margin-top: 28px;
         padding-left: 0;
         padding-right: 0;
     }
 
     .page-heading h1 {
-        font-size: clamp(42px, 13vw, 60px);
+        font-size: clamp(34px, 10vw, 48px);
     }
 
     .page-content,
     .letter-section {
-        padding: 58px 0;
+        padding: 44px 0;
     }
 
     .intro-script {
         max-width: 250px;
         font-size: clamp(24px, 6.8vw, 28px) !important;
+    }
+}
+
+/* Final spacing polish */
+.site-page {
+    padding-top: 64px;
+}
+
+.page-hero {
+    min-height: 360px;
+    padding: 56px 0 48px;
+}
+
+.page-heading {
+    padding: 88px 0 54px;
+    background:
+        linear-gradient(180deg, var(--sage-light), transparent 72%),
+        var(--paper);
+}
+
+.page-heading h1 {
+    font-size: clamp(40px, 5.8vw, 68px);
+}
+
+.page-content,
+.letter-section {
+    padding: 44px 0;
+}
+
+.event-grid,
+.stay-grid {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+.event-panel,
+.stay-panel {
+    padding: 0 36px;
+}
+
+#invitation {
+    min-height: 360px;
+    padding: 58px 0 48px;
+}
+
+.invite-lily {
+    height: 72px;
+    margin-bottom: 14px;
+}
+
+.invite-title-main {
+    max-width: 640px;
+    font-size: clamp(30px, 4.4vw, 48px);
+}
+
+.invite-title-date {
+    max-width: 440px;
+    margin-top: 38px;
+    padding-top: 10px;
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.intro-script {
+    margin-bottom: 10px;
+}
+
+.intro-copy-main {
+    margin-top: 28px;
+}
+
+.stay-shuttle-note {
+    margin-top: 18px;
+}
+
+footer .content {
+    padding: 24px 0 18px;
+}
+
+@media screen and (max-width: 991px) {
+    .site-page {
+        padding-top: 60px;
+    }
+
+    .page-hero {
+        min-height: 320px;
+        padding: 52px 0 42px;
+    }
+
+    .page-heading {
+        padding: 78px 0 46px;
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 50px 0;
+    }
+
+    .event-panel,
+    .stay-panel {
+        padding: 0 22px 30px;
+    }
+
+    .event-panel + .event-panel,
+    .stay-panel + .stay-panel {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .page-hero,
+    #invitation {
+        min-height: 290px;
+        padding: 42px 0 38px;
+    }
+
+    .page-heading {
+        padding: 68px 0 40px;
+    }
+
+    .page-heading h1 {
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 44px 0;
+    }
+
+    .invite-lily {
+        height: 52px;
+    }
+
+    .invite-title-main {
+        max-width: 78vw;
+        font-size: clamp(24px, 7.4vw, 34px);
+    }
+
+    .invite-title-date {
+        max-width: 78vw;
+        margin-top: 28px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .intro-copy-main {
+        margin-top: 22px;
+    }
+}
+
+/* Final spacing polish */
+.site-page {
+    padding-top: 64px;
+}
+
+.page-hero {
+    min-height: 360px;
+    padding: 56px 0 48px;
+}
+
+.page-heading {
+    padding: 88px 0 54px;
+    background:
+        linear-gradient(180deg, var(--sage-light), transparent 72%),
+        var(--paper);
+}
+
+.page-heading h1 {
+    font-size: clamp(40px, 5.8vw, 68px);
+}
+
+.page-content,
+.letter-section {
+    padding: 44px 0;
+}
+
+.event-grid,
+.stay-grid {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+.event-panel,
+.stay-panel {
+    padding: 0 36px;
+}
+
+#invitation {
+    min-height: 360px;
+    padding: 58px 0 48px;
+}
+
+.invite-lily {
+    height: 72px;
+    margin-bottom: 14px;
+}
+
+.invite-title-main {
+    max-width: 640px;
+    font-size: clamp(30px, 4.4vw, 48px);
+}
+
+.invite-title-date {
+    max-width: 440px;
+    margin-top: 38px;
+    padding-top: 10px;
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.intro-script {
+    margin-bottom: 10px;
+}
+
+.intro-copy-main {
+    margin-top: 28px;
+}
+
+.stay-shuttle-note {
+    margin-top: 18px;
+}
+
+footer .content {
+    padding: 24px 0 18px;
+}
+
+@media screen and (max-width: 991px) {
+    .site-page {
+        padding-top: 60px;
+    }
+
+    .page-hero {
+        min-height: 320px;
+        padding: 52px 0 42px;
+    }
+
+    .page-heading {
+        padding: 78px 0 46px;
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 50px 0;
+    }
+
+    .event-panel,
+    .stay-panel {
+        padding: 0 22px 30px;
+    }
+
+    .event-panel + .event-panel,
+    .stay-panel + .stay-panel {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .page-hero,
+    #invitation {
+        min-height: 290px;
+        padding: 42px 0 38px;
+    }
+
+    .page-heading {
+        padding: 68px 0 40px;
+    }
+
+    .page-heading h1 {
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 44px 0;
+    }
+
+    .invite-lily {
+        height: 52px;
+    }
+
+    .invite-title-main {
+        max-width: 78vw;
+        font-size: clamp(24px, 7.4vw, 34px);
+    }
+
+    .invite-title-date {
+        max-width: 78vw;
+        margin-top: 28px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .intro-copy-main {
+        margin-top: 22px;
+    }
+}
+
+/* Final spacing polish */
+.site-page {
+    padding-top: 64px;
+}
+
+.page-hero {
+    min-height: 360px;
+    padding: 56px 0 48px;
+}
+
+.page-heading {
+    padding: 88px 0 54px;
+    background:
+        linear-gradient(180deg, var(--sage-light), transparent 72%),
+        var(--paper);
+}
+
+.page-heading h1 {
+    font-size: clamp(40px, 5.8vw, 68px);
+}
+
+.page-content,
+.letter-section {
+    padding: 44px 0;
+}
+
+.event-grid,
+.stay-grid {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+.event-panel,
+.stay-panel {
+    padding: 0 36px;
+}
+
+#invitation {
+    min-height: 360px;
+    padding: 58px 0 48px;
+}
+
+.invite-lily {
+    height: 72px;
+    margin-bottom: 14px;
+}
+
+.invite-title-main {
+    max-width: 640px;
+    font-size: clamp(30px, 4.4vw, 48px);
+}
+
+.invite-title-date {
+    max-width: 440px;
+    margin-top: 38px;
+    padding-top: 10px;
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.intro-script {
+    margin-bottom: 10px;
+}
+
+.intro-copy-main {
+    margin-top: 28px;
+}
+
+.stay-shuttle-note {
+    margin-top: 18px;
+}
+
+footer .content {
+    padding: 24px 0 18px;
+}
+
+@media screen and (max-width: 991px) {
+    .site-page {
+        padding-top: 60px;
+    }
+
+    .page-hero {
+        min-height: 320px;
+        padding: 52px 0 42px;
+    }
+
+    .page-heading {
+        padding: 78px 0 46px;
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 50px 0;
+    }
+
+    .event-panel,
+    .stay-panel {
+        padding: 0 22px 30px;
+    }
+
+    .event-panel + .event-panel,
+    .stay-panel + .stay-panel {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .page-hero,
+    #invitation {
+        min-height: 290px;
+        padding: 42px 0 38px;
+    }
+
+    .page-heading {
+        padding: 68px 0 40px;
+    }
+
+    .page-heading h1 {
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .page-content,
+    .letter-section {
+        padding: 44px 0;
+    }
+
+    .invite-lily {
+        height: 52px;
+    }
+
+    .invite-title-main {
+        max-width: 78vw;
+        font-size: clamp(24px, 7.4vw, 34px);
+    }
+
+    .invite-title-date {
+        max-width: 78vw;
+        margin-top: 28px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .intro-copy-main {
+        margin-top: 22px;
     }
 }
 
@@ -295,17 +760,21 @@ footer .content {
 }
 
 .page-home .intro-script {
-    color: #9c6b2f !important;
+    color: var(--accent) !important;
 }
 
 :root {
-    --paper: #fbfaf6;
-    --paper-warm: #f5f0e8;
-    --ink: #3b2417;
-    --muted: #7c6658;
-    --line: rgba(59, 36, 23, 0.18);
-    --accent: #9f6e46;
-    --soft-accent: #cdb795;
+    --paper: #fffdf8;
+    --paper-warm: #f3f7ef;
+    --ink: #263f33;
+    --muted: #637468;
+    --txt-primary: #637468;
+    --line: rgba(38, 63, 51, 0.18);
+    --accent: #9f7b34;
+    --soft-accent: #cdb77b;
+    --sage: #8fa184;
+    --sage-light: rgba(143, 161, 132, 0.14);
+    --gold-light: rgba(159, 123, 52, 0.22);
 }
 
 html,
@@ -358,7 +827,7 @@ a:focus {
     left: 0;
     width: 100%;
     z-index: 999;
-    background: rgba(251, 250, 246, 0.96);
+    background: rgba(255, 253, 248, 0.96);
     backdrop-filter: blur(10px);
 }
 
@@ -482,7 +951,11 @@ header ul.member-actions li a.btn-white:focus,
 
 #invitation {
     position: relative;
-    padding: 148px 0 74px;
+    background:
+        linear-gradient(90deg, transparent, var(--sage-light), transparent),
+        var(--paper);
+    min-height: 360px;
+    padding: 58px 0 48px;
     border-bottom: 1px solid var(--line);
 }
 
@@ -493,7 +966,7 @@ header ul.member-actions li a.btn-white:focus,
     top: 118px;
     bottom: 52px;
     width: 1px;
-    background: linear-gradient(180deg, transparent, rgba(159, 110, 70, 0.34), transparent);
+    background: linear-gradient(180deg, transparent, rgba(143, 161, 132, 0.44), var(--gold-light), transparent);
 }
 
 #invitation:before {
@@ -510,10 +983,10 @@ header ul.member-actions li a.btn-white:focus,
 }
 
 .invite-lily {
-    height: 100px;
-    margin: 0 auto 22px;
-    opacity: 0.72;
-    filter: sepia(0.16) saturate(0.75) contrast(0.88);
+    height: 72px;
+    margin: 0 auto 14px;
+    opacity: 0.76;
+    filter: sepia(0.14) saturate(0.82) hue-rotate(18deg) contrast(0.9);
 }
 
 .invite-title-text {
@@ -521,11 +994,11 @@ header ul.member-actions li a.btn-white:focus,
 }
 
 .invite-title-main {
-    max-width: 760px;
+    max-width: 640px;
     margin: 0 auto;
     color: var(--ink);
     font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", "Lucida Calligraphy", "Brush Script MT", cursive;
-    font-size: clamp(36px, 5.2vw, 60px);
+    font-size: clamp(30px, 4.4vw, 48px);
     font-style: normal;
     font-weight: 400;
     line-height: 1.12;
@@ -543,7 +1016,7 @@ header ul.member-actions li a.btn-white:focus,
 }
 
 .heart {
-    color: #e63946;
+    color: #c94f5f;
     display: inline;
     flex-shrink: 0;
 }
@@ -559,15 +1032,15 @@ header ul.member-actions li a.btn-white:focus,
 
 .invite-title-date {
     display: block;
-    max-width: 760px;
-    margin: 50px auto 0;
-    padding: 12px 18px 0;
+    max-width: 440px;
+    margin: 38px auto 0;
+    padding: 10px 18px 0;
     border-top: 1px solid var(--soft-accent);
-    color: var(--muted);
-    font-size: 12px;
-    letter-spacing: 4.5px;
-    line-height: 1.8;
-    text-align: right;
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    line-height: 1.6;
+    text-align: center;
 }
 
 .heart-fade-in {
@@ -595,7 +1068,8 @@ header ul.member-actions li a.btn-white:focus,
 }
 
 .about-us-section .col-md-12 {
-    margin-bottom: 48px;
+    margin-top: 14px;
+    margin-bottom: 30px;
 }
 
 .about-us-photo {
@@ -668,7 +1142,7 @@ section.events,
     position: absolute;
     top: 34px;
     left: 15px;
-    color: rgba(59, 36, 23, 0.24);
+    color: rgba(38, 63, 51, 0.26);
     font-size: 12px;
     letter-spacing: 5px;
     writing-mode: vertical-rl;
@@ -680,7 +1154,7 @@ section.events,
     position: absolute;
     top: 34px;
     right: 15px;
-    color: rgba(59, 36, 23, 0.24);
+    color: rgba(38, 63, 51, 0.26);
     font-size: 12px;
     letter-spacing: 5px;
     writing-mode: vertical-rl;
@@ -857,7 +1331,7 @@ footer p {
     }
 
     .section-padding {
-        padding: 58px 0;
+        padding: 44px 0;
     }
 
     #intro p {
@@ -935,21 +1409,21 @@ header ul.primary-nav li a {
 }
 
 .page-hero {
-    min-height: 455px;
+    min-height: 360px;
     display: flex;
     align-items: center;
-    padding: 82px 0 70px;
+    padding: 56px 0 48px;
 }
 
 .page-heading {
-    padding: 118px 0 72px;
+    padding: 88px 0 54px;
     text-align: center;
 }
 
 .page-heading h1 {
     margin: 0;
     color: var(--ink);
-    font-size: clamp(48px, 7vw, 86px);
+    font-size: clamp(40px, 5.8vw, 68px);
     font-weight: 500;
     line-height: 0.95;
 }
@@ -968,7 +1442,7 @@ header ul.primary-nav li a {
 
 .page-content,
 .letter-section {
-    padding: 78px 0;
+    padding: 44px 0;
 }
 
 .letter-section p,
@@ -988,29 +1462,38 @@ header ul.primary-nav li a {
     line-height: 1.05 !important;
 }
 
+.intro-copy-main {
+    margin-top: 28px;
+}
+
 .invite-lily {
     height: 84px;
 }
 
 .invite-title-main {
     max-width: 800px;
-    font-size: clamp(46px, 6.4vw, 78px);
+    font-size: clamp(30px, 4.4vw, 48px);
 }
 
 .invite-title-date {
-    max-width: 560px;
-    margin-top: 34px;
+    max-width: 440px;
+    margin-top: 38px;
+    padding-top: 10px;
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    line-height: 1.6;
     text-align: center;
 }
 
 .event-grid,
 .stay-grid {
-    margin-bottom: 48px;
+    margin-top: 14px;
+    margin-bottom: 30px;
 }
 
 .event-panel,
 .stay-panel {
-    padding: 0 48px;
+    padding: 0 36px;
     text-align: center;
 }
 
@@ -1043,6 +1526,12 @@ header ul.primary-nav li a {
     font-size: 17px;
 }
 
+.stay-shuttle-note {
+    margin: 28px auto 0;
+    color: var(--accent) !important;
+    font-size: 17px !important;
+}
+
 .about-us-photo {
     max-width: 620px;
     aspect-ratio: 5 / 4;
@@ -1066,24 +1555,24 @@ footer .content {
     }
 
     .page-hero {
-        min-height: 390px;
-        padding: 72px 0 58px;
+        min-height: 320px;
+        padding: 52px 0 42px;
     }
 
     .page-heading {
-        padding: 102px 0 58px;
+        padding: 78px 0 46px;
     }
 
     .event-panel,
     .stay-panel {
-        padding: 0 24px 38px;
+        padding: 0 22px 30px;
     }
 
     .event-panel + .event-panel,
     .stay-panel + .stay-panel {
         border-left: 0;
         border-top: 1px solid var(--line);
-        padding-top: 38px;
+        padding-top: 30px;
     }
 }
 
@@ -1104,7 +1593,7 @@ footer .content {
     }
 
     .page-hero {
-        min-height: 342px;
+        min-height: 290px;
     }
 
     .invite-lily {
@@ -1113,23 +1602,23 @@ footer .content {
 
     .invite-title-main {
         max-width: 82vw;
-        font-size: clamp(34px, 10vw, 44px);
+        font-size: clamp(24px, 7.4vw, 34px);
     }
 
     .invite-title-date {
         max-width: 82vw;
-        margin-top: 26px;
+        margin-top: 28px;
         padding-left: 0;
         padding-right: 0;
     }
 
     .page-heading h1 {
-        font-size: clamp(42px, 13vw, 60px);
+        font-size: clamp(34px, 10vw, 48px);
     }
 
     .page-content,
     .letter-section {
-        padding: 58px 0;
+        padding: 44px 0;
     }
 }
 
