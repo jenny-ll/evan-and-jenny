@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="css/minimal.css">
+    <link rel="stylesheet" href="css/minimal-clean.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -38,7 +39,7 @@
 <section class="navigation">
     <header>
         <div class="header-content">
-            <div class="logo"><a href="index.html" class="logo-mark">J&amp;E</a></div>
+            <div class="logo"><a href="index.html" class="logo-mark" aria-label="Jenny and Evan"><span>J</span><span class="logo-heart" aria-hidden="true">&hearts;</span><span>E</span></a></div>
             <div class="header-nav">
                 <nav>
                     <ul class="primary-nav">
@@ -58,42 +59,48 @@
 </section>
 
 <main class="site-page">
-    <section class="page-heading">
-        <div class="container">
-            <p class="eyebrow" data-i18n="stay.eyebrow">Vancouver</p>
-            <h1 data-i18n="stay.title">Where to Stay</h1>
-        </div>
-    </section>
-
     <section class="stay-section page-content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 text-center">
-                    <p data-i18n="stay.intro">We will not be providing designated accommodations for our guests. We hope this gives everyone more flexibility in their travel plans. To help friends and family coming from out of town, here are a few areas we recommend. We highly encourage booking in advance!</p>
+            <div class="stay-intro">
+                <div class="text-center">
+                    <p data-i18n="stay.intro">To give everyone more flexibility in their travel plans, we will not be providing designated accommodations for our guests. To help friends and family coming from out of town, here are a few areas we recommend. We highly encourage booking in advance!</p>
+                    <p class="stay-shuttle-note" data-i18n="stay.shuttle">We will be offering complimentary shuttle service to the wedding, departing near the intersection of Cambie Street and West Broadway.</p>
                 </div>
             </div>
-            <div class="row stay-grid">
-                <div class="col-md-4 stay-panel">
-                    <h2 data-i18n="stay.nearTitle">Near Cecil Green Park House</h2>
-                    <p class="panel-note" data-i18n="stay.nearNote">For those who want to enjoy the beauty of UBC's campus and be close to the venue.</p>
-                    <p data-i18n-html="stay.nearList">Gage Suites at UBC<br>West Coast Suites at UBC</p>
-                </div>
-                <div class="col-md-4 stay-panel">
-                    <h2 data-i18n="stay.kitsTitle">Kitsilano / West Broadway</h2>
-                    <p class="panel-note" data-i18n="stay.kitsNote">A gorgeous area with short-term stay options, beach access, and a straightforward drive to Cecil Green Park House.</p>
-                    <p data-i18n-html="stay.kitsList">Short-term stays<br>Airbnb or Vrbo</p>
-                </div>
-                <div class="col-md-4 stay-panel">
-                    <h2 data-i18n="stay.downtownTitle">Downtown Vancouver</h2>
-                    <p class="panel-note" data-i18n="stay.downtownNote">Best for sightseeing, restaurants, and shopping, about a 20-30 minute drive from the venue.</p>
-                    <p data-i18n-html="stay.downtownList">JW Marriott Parq<br>Hyatt Regency Vancouver<br>Fairmont Hotel Vancouver<br>The Westin Bayshore</p>
-                </div>
+
+            <div class="stay-guide">
+                <article class="stay-area">
+                    <div class="stay-number" aria-hidden="true">01</div>
+                    <div class="stay-content">
+                        <h2 data-i18n="stay.nearTitle">Near Cecil Green Park House</h2>
+                        <p class="panel-note" data-i18n="stay.nearNote">For those who want to enjoy the beauty of UBC's campus and be close to the venue.</p>
+                        <p class="stay-options" data-i18n-html="stay.nearList">Gage Suites at UBC<br>West Coast Suites at UBC</p>
+                    </div>
+                </article>
+
+                <article class="stay-area">
+                    <div class="stay-number" aria-hidden="true">02</div>
+                    <div class="stay-content">
+                        <h2 data-i18n="stay.kitsTitle">Kitsilano / West Broadway</h2>
+                        <p class="panel-note" data-i18n="stay.kitsNote">A gorgeous area with beach access.</p>
+                        <p class="stay-options" data-i18n-html="stay.kitsList">Short-term stays<br>Airbnb / Vrbo</p>
+                    </div>
+                </article>
+
+                <article class="stay-area">
+                    <div class="stay-number" aria-hidden="true">03</div>
+                    <div class="stay-content">
+                        <h2 data-i18n="stay.downtownTitle">Downtown Vancouver</h2>
+                        <p class="panel-note" data-i18n="stay.downtownNote">Best for sightseeing, restaurants, and shopping.</p>
+                        <p class="stay-options" data-i18n-html="stay.downtownList">JW Marriott Parq <br> the DOUGLAS<br>Hyatt Regency Vancouver<br>Sutton Place Hotel</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 </main>
 
-<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">Jenny &amp; Evan</p></div></div></div></footer>
+<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">With love, Jenny and Evan</p></div></div></div></footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>

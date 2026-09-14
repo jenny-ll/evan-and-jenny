@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="css/minimal.css">
+    <link rel="stylesheet" href="css/minimal-clean.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -38,7 +39,7 @@
 <section class="navigation">
     <header>
         <div class="header-content">
-            <div class="logo"><a href="index.html" class="logo-mark">J&amp;E</a></div>
+            <div class="logo"><a href="index.html" class="logo-mark" aria-label="Jenny and Evan"><span>J</span><span class="logo-heart" aria-hidden="true">&hearts;</span><span>E</span></a></div>
             <div class="header-nav">
                 <nav>
                     <ul class="primary-nav">
@@ -58,33 +59,39 @@
 </section>
 
 <main class="site-page">
-    <section class="page-heading">
-        <div class="container">
-            <p class="eyebrow" data-i18n="events.eyebrow">Wedding Weekend</p>
-            <h1 data-i18n="events.title">Events</h1>
-        </div>
-    </section>
-
     <section class="events page-content" id="events">
         <div class="container">
-            <div class="row event-grid">
-                <div class="col-md-6 col-sm-12 event-panel">
-                    <p class="event-date" data-i18n="events.date1">Saturday, May 29, 2027</p>
-                    <h2 data-i18n="events.welcomeTitle">Welcome Party</h2>
-                    <p class="event-meta" data-i18n="events.welcomeMeta">Home &bull; 7:00 PM</p>
-                    <p data-i18n="events.welcomeCopy">Join us for a relaxed welcome party before the big day. We will kick the weekend off with drinks, bites, and time to catch up with family and friends.</p>
-                </div>
-                <div class="col-md-6 col-sm-12 event-panel">
-                    <p class="event-date" data-i18n="events.date2">Sunday, May 30, 2027</p>
-                    <h2 data-i18n="events.weddingTitle">Wedding Day</h2>
-                    <p class="event-meta" data-i18n-html="events.weddingMeta"><a href="https://www.google.com/maps/place/Cecil+Green+Park+House/@49.2705956,-123.264963,15.26z/data=!4m6!3m5!1s0x548672b1a4606653:0xba00269da2e1e9f0!8m2!3d49.2713887!4d-123.2577044!16s%2Fg%2F11b5pj9y_v?entry=ttu&amp;g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Cecil Green Park House</a> &bull; 4:00 PM</p>
-                    <p data-i18n="events.weddingCopy">Our wedding celebration begins in the afternoon and continues into the evening with cocktail hour and reception.</p>
-                </div>
+            <div class="event-timeline">
+                <article class="event-item">
+                    <div class="event-date-lockup">
+                        <span class="event-day">29</span>
+                        <span class="event-month" data-i18n="events.monthMay">May</span>
+                        <span class="event-weekday" data-i18n="events.date1">Saturday, May 29, 2027</span>
+                    </div>
+                    <div class="event-details">
+                        <p class="event-kicker" data-i18n="events.welcomeKicker">Evening before</p>
+                        <h2 data-i18n="events.welcomeTitle">Welcome Party</h2>
+                        <p class="event-meta" data-i18n="events.welcomeMeta">Home &bull; 7:00 PM</p>
+                        <p data-i18n="events.welcomeCopy">Join us for a relaxed welcome party before the big day. We will kick the weekend off with drinks, bites, and time to catch up with family and friends.</p>
+                    </div>
+                </article>
+
+                <article class="event-item event-item-featured">
+                    <div class="event-date-lockup">
+                        <span class="event-day">30</span>
+                        <span class="event-month" data-i18n="events.monthMay">May</span>
+                        <span class="event-weekday" data-i18n="events.date2">Sunday, May 30, 2027</span>
+                    </div>
+                    <div class="event-details">
+                        <p class="event-kicker" data-i18n="events.weddingKicker">Ceremony and celebration</p>
+                        <h2 data-i18n="events.weddingTitle">Wedding Day</h2>
+                        <p class="event-meta" data-i18n-html="events.weddingMeta"><a href="https://www.google.com/maps/place/Cecil+Green+Park+House/@49.2705956,-123.264963,15.26z/data=!4m6!3m5!1s0x548672b1a4606653:0xba00269da2e1e9f0!8m2!3d49.2713887!4d-123.2577044!16s%2Fg%2F11b5pj9y_v?entry=ttu&amp;g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Cecil Green Park House</a> &bull; 4:00 PM</p>
+                        <p data-i18n="events.weddingCopy">Our wedding celebration begins in the afternoon and continues into the evening with cocktail hour and reception.</p>
+                    </div>
+                </article>
             </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal" data-i18n="events.dressButton">Dress code</a>
-                </div>
+            <div class="event-actions text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal" data-i18n="events.dressButton">Dress code</a>
             </div>
         </div>
     </section>
@@ -105,7 +112,7 @@
     </div>
 </main>
 
-<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">Jenny &amp; Evan</p></div></div></div></footer>
+<footer><div class="container"><div class="row"><div class="col-sm-12 text-center content"><p data-i18n="footer.names">With love, Jenny and Evan</p></div></div></div></footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>

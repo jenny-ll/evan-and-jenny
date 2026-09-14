@@ -7,7 +7,7 @@
             'nav.events': '活动安排',
             'nav.stay': '住宿',
             'nav.rsvp': 'RSVP',
-            'footer.names': 'Jenny & Evan',
+            'footer.names': 'With love, Jenny and Evan',
 
             'home.names': 'Jenny 和 Evan',
             'home.date': '2027年5月30日 · 温哥华',
@@ -26,30 +26,34 @@
 
             'events.eyebrow': '婚礼周末',
             'events.title': '活动安排',
+            'events.monthMay': '五月',
             'events.date1': '2027年5月29日，星期六',
+            'events.welcomeKicker': '婚礼前夜',
             'events.welcomeTitle': '欢迎派对',
             'events.welcomeMeta': '家中 · 晚上 7:00',
             'events.welcomeCopy': '婚礼前一晚，我们会准备一个轻松的欢迎派对。欢迎大家来喝点东西、吃些小食，也和亲朋好友好好聚一聚，为这个周末暖暖身。',
             'events.date2': '2027年5月30日，星期日',
+            'events.weddingKicker': '仪式与庆祝',
             'events.weddingTitle': '婚礼当天',
-            'events.weddingCopy': '婚礼庆祝将于下午开始，随后是鸡尾酒时间和晚宴，一起陪我们把这一天庆祝到夜晚。',
+            'events.weddingCopy': '婚礼庆祝将于下午开始，随后是鸡尾酒时间和晚宴招待，一起陪我们把这一天庆祝到夜晚。',
             'events.dressButton': '着装建议',
             'events.dressTitle': '着装建议',
 
             'stay.eyebrow': '温哥华',
             'stay.title': '住宿参考',
             'stay.intro': '我们不会为宾客统一安排指定酒店，希望大家可以按照自己的行程更灵活地选择住宿。为了方便从外地来的亲友，我们整理了几个推荐区域供大家参考。也建议大家尽早预订！',
+            'stay.shuttle': '我们也会提供前往婚礼的免费接驳车服务，出发地点在 West Broadway 和 Cambie Street 交叉口附近。',
             'stay.nearTitle': 'Cecil Green Park House 附近',
             'stay.nearNote': '适合想住得离婚礼场地近一些，也顺便感受 UBC 校园环境的宾客。',
             'stay.kitsTitle': 'Kitsilano / West Broadway',
-            'stay.kitsNote': '这是温哥华很舒服的区域，靠近海边，也有不少短租选择，开车前往 Cecil Green Park House 也很方便。',
+            'stay.kitsNote': '温哥华很舒服的区域，靠近海边。',
             'stay.downtownTitle': '温哥华市中心',
-            'stay.downtownNote': '适合想把观光、餐厅和购物都安排进旅程的宾客，距离婚礼场地约 20-30 分钟车程。',
+            'stay.downtownNote': '适合想安排观光、餐厅和购物的宾客。',
 
             'rsvp.eyebrow': '敬请回复',
             'rsvp.title': 'RSVP',
             'rsvp.comingSoon': '暂未开放',
-            'rsvp.copy': '正式请柬将于 2027 年初寄送到你的地址。届时，请柬中会请宾客通过本网站的 RSVP 表单确认是否出席。'
+            'rsvp.copy': '正式请柬将于 2027 年初寄送到你的通讯地址。'
         }
     };
 
@@ -59,8 +63,8 @@
             'events.dressWelcome': '<strong>精致休闲</strong><br>欢迎选择舒服但有质感的穿搭，例如衬衫、上衣、长裤、半裙或连衣裙。',
             'events.dressWedding': '<strong>鸡尾酒会着装</strong><br>建议选择优雅、正式一些的穿搭，例如西装领带、中长款或长款连衣裙、鸡尾酒裙或连体裤。',
             'stay.nearList': 'Gage Suites at UBC<br>West Coast Suites at UBC',
-            'stay.kitsList': '短租住宿<br>Airbnb 或 Vrbo',
-            'stay.downtownList': 'JW Marriott Parq<br>Hyatt Regency Vancouver<br>Fairmont Hotel Vancouver<br>The Westin Bayshore'
+            'stay.kitsList': '短租住宿<br>Airbnb / Vrbo',
+            'stay.downtownList': 'JW Marriott Parq<br>the DOUGLAS<br>Hyatt Regency Vancouver<br>Sutton Place Hotel'
         }
     };
 
