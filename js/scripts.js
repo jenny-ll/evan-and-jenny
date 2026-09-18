@@ -153,15 +153,17 @@ $(document).ready(function () {
   /***************** Nav Transformicon ******************/
 
   /* When user clicks the Icon */
-  $(".nav-toggle").click(function () {
+  $(".nav-toggle").click(function (event) {
     $(this).toggleClass("active");
     $(".header-nav").toggleClass("open");
+    $("body").toggleClass("nav-open");
     event.preventDefault();
   });
   /* When user clicks a link */
-  $(".header-nav li a").click(function () {
-    $(".nav-toggle").toggleClass("active");
-    $(".header-nav").toggleClass("open");
+  $(".header-nav li a, .header-nav .language-toggle").click(function () {
+    $(".nav-toggle").removeClass("active");
+    $(".header-nav").removeClass("open");
+    $("body").removeClass("nav-open");
   });
 
   /***************** Smooth Scrolling ******************/
