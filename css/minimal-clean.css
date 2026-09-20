@@ -816,3 +816,114 @@ footer .content {
         font-size: 17px;
     }
 }
+
+/* Final mobile navigation override */
+.navicon {
+    position: fixed !important;
+    top: calc(env(safe-area-inset-top, 0px) + 58px) !important;
+    right: 18px !important;
+    z-index: 100001 !important;
+    display: block !important;
+    width: 46px !important;
+    height: 46px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.nav-toggle:before,
+.nav-toggle:after,
+.nav-toggle span {
+    content: "" !important;
+    position: absolute !important;
+    left: 8px !important;
+    display: block !important;
+    width: 30px !important;
+    height: 2px !important;
+    border-radius: 2px !important;
+    background: var(--ink) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: top 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-toggle:before {
+    top: 14px !important;
+}
+
+.nav-toggle span {
+    top: 22px !important;
+}
+
+.nav-toggle:after {
+    top: 30px !important;
+}
+
+.nav-toggle span:before,
+.nav-toggle span:after {
+    display: none !important;
+}
+
+.nav-toggle.active:before {
+    top: 22px !important;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active span {
+    opacity: 0 !important;
+}
+
+.nav-toggle.active:after {
+    top: 22px !important;
+    transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 992px) {
+    .navicon {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .navigation header {
+        min-height: 76px;
+    }
+
+    .header-nav {
+        padding-top: calc(env(safe-area-inset-top, 0px) + 104px) !important;
+    }
+
+    .header-nav ul.primary-nav li,
+    .header-nav ul.member-actions li {
+        margin-bottom: 18px !important;
+    }
+
+    .invite-title-block {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .invite-title-main {
+        text-align: center;
+        line-height: 1.08;
+    }
+
+    .invite-title-date {
+        width: min(78vw, 360px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
