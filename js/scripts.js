@@ -157,13 +157,13 @@ $(document).ready(function () {
     event.preventDefault();
     var isOpen = $(".header-nav").toggleClass("open").hasClass("open");
     $(".nav-toggle").toggleClass("active", isOpen);
-    $("body").toggleClass("nav-open", isOpen);
+    $("html, body").toggleClass("nav-open", isOpen);
   });
   /* When user clicks a link */
   $(".header-nav li a, .header-nav .language-toggle").click(function () {
     $(".nav-toggle").removeClass("active");
     $(".header-nav").removeClass("open");
-    $("body").removeClass("nav-open");
+    $("html, body").removeClass("nav-open");
   });
 
   /***************** Smooth Scrolling ******************/
