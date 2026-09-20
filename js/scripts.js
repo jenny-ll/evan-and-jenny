@@ -154,10 +154,10 @@ $(document).ready(function () {
 
   /* When user clicks the Icon */
   $(".nav-toggle").click(function (event) {
-    $(this).toggleClass("active");
-    $(".header-nav").toggleClass("open");
-    $("body").toggleClass("nav-open");
     event.preventDefault();
+    var isOpen = $(".header-nav").toggleClass("open").hasClass("open");
+    $(".nav-toggle").toggleClass("active", isOpen);
+    $("body").toggleClass("nav-open", isOpen);
   });
   /* When user clicks a link */
   $(".header-nav li a, .header-nav .language-toggle").click(function () {
