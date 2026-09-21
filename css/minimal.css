@@ -1,18 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/amsterdam-handwriting");
 
 /* Minimal editorial refresh */
-@font-face {
-    font-family: "Amsterdam Handwriting Local";
-    src:
-        local("Amsterdam Handwriting"),
-        local("AmsterdamHandwriting"),
-        url("../fonts/amsterdam-handwriting.woff2") format("woff2"),
-        url("../fonts/amsterdam-handwriting.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* Multi-page editorial system */
 :root {
     --frame-width: min(1120px, 90vw);
@@ -1023,7 +1011,7 @@ header ul.member-actions li a.btn-white:focus,
 
 /* Amsterdam handwriting for headline pieces */
 .amsterdam {
-    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", "Lucida Calligraphy", "Brush Script MT", cursive;
+    font-family: "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", "Lucida Calligraphy", "Brush Script MT", cursive;
     font-size: clamp(22px, 3.6vw, 40px);
     line-height: 1.05;
     display: inline-block;
@@ -1457,7 +1445,7 @@ header ul.primary-nav li a {
 .intro-script {
     margin-bottom: 18px;
     color: var(--ink) !important;
-    font-family: "Amsterdam Handwriting Local", "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", cursive;
+    font-family: "Amsterdam Handwriting", "Apple Chancery", "Snell Roundhand", cursive;
     font-size: clamp(32px, 4.2vw, 52px) !important;
     line-height: 1.05 !important;
 }
