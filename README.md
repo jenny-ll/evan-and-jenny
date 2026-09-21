@@ -4,7 +4,5 @@
 
 Credits to Ram Patra for the open source repo that we forked this from.
 
-Run the website locally at 
+Run the website locally at
 `npx http-server -p 8000`
-
-
