@@ -3,14 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>About Us | Jenny and Evan Wedding</title>
-    <meta name="description" content="About Jenny and Evan.">
+    <title>RSVP | Jenny and Evan Wedding</title>
+    <meta name="description" content="RSVP for Jenny and Evan's wedding.">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <script>
-        if (window.location.pathname.endsWith('/about.html')) {
-            window.location.replace(window.location.pathname.replace(/about\.html$/, 'about/') + window.location.search + window.location.hash);
-        }
-    </script>
+    <base href="../">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="favicon-heart.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -27,7 +23,7 @@
     <link rel="stylesheet" href="css/minimal.css">
     <link rel="stylesheet" href="css/minimal-clean.css">
 </head>
-<body id="top" class="page-about">
+<body id="top" class="page-rsvp">
 <section class="navigation">
     <header>
         <div class="header-content">
@@ -51,18 +47,19 @@
 </section>
 
 <main class="site-page">
-    <section class="about-us-section page-content">
+    <section class="page-heading">
+        <div class="container">
+            <p class="eyebrow" data-i18n="rsvp.eyebrow">Please Reply</p>
+            <h1 data-i18n="rsvp.title">RSVP</h1>
+        </div>
+    </section>
+
+    <section class="rsvp page-content text-center" id="rsvp">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <img src="img/engagement_photo.jpg" alt="Jenny and Evan" class="about-us-photo" data-i18n-attr="alt:about.photoAlt">
-                    <div class="about-us-text">
-                        <p class="story-kicker" data-i18n="about.kicker">Cornell Tech, August 2021</p>
-                        <p data-i18n="about.story1">Jenny and Evan first met during the first week of grad school at a rooftop party at The House at Cornell Tech. Neither of them remembers the moment quite the same way, but that rooftop quietly became the beginning of everything.</p>
-                        <p data-i18n="about.story2">Over the next year, they became close friends through rock climbing, group hangouts, and countless late-night heart-to-hearts. Many of those conversations happened back on that same rooftop, stretching on until the sun rose over the New York City skyline.</p>
-                        <p data-i18n="about.story3">Eventually, their friendship grew into something more (you can only have so many 18-hour sleepless FaceTime calls and brush it off as just being close friends)... and they made it official on August 10, 2022. Years later, Evan brought Jenny back to that rooftop for the first time since graduation and asked her to marry him. Jenny said yes.</p>
-                        <p data-i18n="about.story4">They are so excited to begin this next chapter together, and even more excited to celebrate it with the people they love most!!</p>
-                    </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 data-i18n="rsvp.comingSoon">Coming Soon</h2>
+                    <p data-i18n="rsvp.copy">Formal invitations will be sent out in early 2027 to your physical address.</p>
                 </div>
             </div>
         </div>
