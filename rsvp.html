@@ -6,6 +6,11 @@
     <title>RSVP | Jenny and Evan Wedding</title>
     <meta name="description" content="RSVP for Jenny and Evan's wedding.">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script>
+        if (window.location.pathname.endsWith('/rsvp.html')) {
+            window.location.replace(window.location.pathname.replace(/rsvp\.html$/, 'rsvp/') + window.location.search + window.location.hash);
+        }
+    </script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="favicon-heart.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -26,17 +31,17 @@
 <section class="navigation">
     <header>
         <div class="header-content">
-            <div class="logo"><a href="index.html" class="logo-mark" aria-label="Jenny and Evan"><span>J</span><span class="logo-heart" aria-hidden="true">&hearts;</span><span>E</span></a></div>
+            <div class="logo"><a href="./" class="logo-mark" aria-label="Jenny and Evan"><span>J</span><span class="logo-heart" aria-hidden="true">&hearts;</span><span>E</span></a></div>
             <div class="header-nav">
                 <nav>
                     <ul class="primary-nav">
-                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-                        <li><a href="events.html" data-i18n="nav.events">Events</a></li>
-                        <li><a href="stay.html" data-i18n="nav.stay">Stay</a></li>
+                        <li><a href="about/" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="events/" data-i18n="nav.events">Events</a></li>
+                        <li><a href="stay/" data-i18n="nav.stay">Stay</a></li>
                     </ul>
                     <ul class="member-actions">
                         <li><button type="button" class="language-toggle" data-translate-toggle aria-label="Translate to Chinese">中文</button></li>
-                        <li><a href="rsvp.html" class="btn-white btn-small" data-i18n="nav.rsvp">RSVP</a></li>
+                        <li><a href="rsvp/" class="btn-white btn-small" data-i18n="nav.rsvp">RSVP</a></li>
                     </ul>
                 </nav>
             </div>
